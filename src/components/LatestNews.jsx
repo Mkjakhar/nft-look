@@ -38,7 +38,7 @@ const LatestNews = () => {
   };
   return (
     <>
-      <div id="news" className="container custom_container py-5">
+      <div id="news" className="container custom_container pb-5 pt-md-4">
         <h2 className="common_heading text-center pb-4 mb-0">Latest News</h2>
         <div className="position-relative">
           <Slider ref={mySlider} {...settings}>

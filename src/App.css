@@ -214,6 +214,11 @@ section:has(.hero_bg) {
   background-color: var(--clr-white);
   transition: linear 250ms;
 }
+.category_cards {
+  padding: 15px 15px 17px 18px;
+  margin-top: unset;
+  margin-bottom: 32px;
+}
 .news_cards {
   padding: 26px 17px 26px 20px;
   border-radius: 25px;
@@ -224,6 +229,9 @@ section:has(.hero_bg) {
 }
 .max_w_1920 {
   /* max-width: 1920px; */
+}
+.max_w_800 {
+  max-width: 850px;
 }
 .nft_cards:hover,
 .news_cards:hover {
@@ -279,10 +287,39 @@ section:has(.hero_bg) {
 .explore_para {
   padding-bottom: 16px;
 }
+.tabs_btn {
+  width: 110px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.13);
+  transition: linear 250ms;
+}
+.tabs_btn:hover {
+  background-color: var(--clr-black);
+  color: var(--clr-white) !important;
+}
+.category_cards img {
+  min-height: 200px;
+}
+.view_btn {
+  height: 36px;
+  width: 137px;
+  transition: linear 250ms;
+  border: 1px solid transparent;
+}
+.view_btn:hover {
+  background-color: transparent !important;
+  color: var(--clr-black) !important;
+  border-color: var(--clr-black);
+}
 @media (min-width: 576px) {
   .page_logo {
     width: 50px;
     height: 50px;
+  }
+  .tabs_btn {
+    width: 170px;
+    height: 40px;
   }
   .search_bar input {
     padding: 10px 0 8px 0;

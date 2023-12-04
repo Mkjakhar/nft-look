@@ -1,8 +1,25 @@
 import React, { useState } from "react";
-import { Col, Row } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import { categoryData } from "./common/Helper";
+import CategoryCards from "./CategoryCards";
 const NftCategory = () => {
   const [tabs, setTabs] = useState(2);
+  const getCategorySlice = (tabs) => {
+    switch (tabs) {
+      case 1:
+        return categoryData.slice(8, 12);
+      case 2:
+        return categoryData;
+      case 3:
+        return categoryData.slice(6, 11);
+      case 4:
+        return categoryData.slice(2, 8);
+      case 5:
+        return categoryData.slice(4, 8);
+      default:
+        return [];
+    }
+  };
   return (
     <>
       <div className="container custom_container py-5">
@@ -58,72 +75,11 @@ const NftCategory = () => {
           </button>
         </div>
         <div className="mt-5 pt-md-4">
-          {tabs === 1 && (
-            <Row>
-              {categoryData.slice(8, 12).map((val, i) => {
-                return (
-                  <Col sm={6} md={4} xl={3}>
-                    <div className="nft_cards category_cards d-flex flex-column align-items-center">
-                      <p className="text-black w-100 ff_josefin fw-semibold lh_normal fs_md mb-2">
-                        {val.rank}
-                      </p>
-                      <img className="w-100" src={val.img} alt="nft1" />
-                      <p className="text-black w-100 ff_josefin fw-semibold lh_normal fs_2xl mt-2">
-                        {val.heading}
-                      </p>
-                      <div className="d-flex align-items-center justify-content-between w-100">
-                        <p className="fs_xs fw-semibold mb-0 text-black opacity_07 lh_normal ff_josefin">
-                          {val.price}
-                        </p>
-                        <div className="d-flex align-items-center gap-1">
-                          {val.likeimg}
-                          <p className="fs_xxs fw-semibold mb-0 text-black opacity_07 lh_normal ff_josefin">
-                            {val.likes}
-                          </p>
-                        </div>
-                      </div>
-                      <button className="buy_btn fs_md fw-semibold lh_normal ff_josefin rounded-pill text-uppercase bg-transparent">
-                        {val.buybtn}
-                      </button>
-                    </div>
-                  </Col>
-                );
-              })}
-            </Row>
-          )}
-          {tabs === 2 && (
-            <Row>
-              {categoryData.map((val, i) => {
-                return (
-                  <Col sm={6} md={4} xl={3}>
-                    <div className="nft_cards category_cards d-flex flex-column align-items-center">
-                      <p className="text-black w-100 ff_josefin fw-semibold lh_normal fs_md mb-2">
-                        {val.rank}
-                      </p>
-                      <img className="w-100" src={val.img} alt="nft1" />
-                      <p className="text-black w-100 ff_josefin fw-semibold lh_normal fs_2xl mt-2">
-                        {val.heading}
-                      </p>
-                      <div className="d-flex align-items-center justify-content-between w-100">
-                        <p className="fs_xs fw-semibold mb-0 text-black opacity_07 lh_normal ff_josefin">
-                          {val.price}
-                        </p>
-                        <div className="d-flex align-items-center gap-1">
-                          {val.likeimg}
-                          <p className="fs_xxs fw-semibold mb-0 text-black opacity_07 lh_normal ff_josefin">
-                            {val.likes}
-                          </p>
-                        </div>
-                      </div>
-                      <button className="buy_btn fs_md fw-semibold lh_normal ff_josefin rounded-pill text-uppercase bg-transparent">
-                        {val.buybtn}
-                      </button>
-                    </div>
-                  </Col>
-                );
-              })}
-            </Row>
-          )}
+          <Row>
+            {getCategorySlice(tabs).map((val, i) => (
+              <CategoryCards val={val} key={i} />
+            ))}
+          </Row>
         </div>
         <div className="d-flex justify-content-center">
           <button className="view_btn text-black mt-1 fs_2xl fw-medium ff_josefin text-white bg-black rounded-pill">

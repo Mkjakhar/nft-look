@@ -214,9 +214,32 @@ section:has(.hero_bg) {
   background-color: var(--clr-white);
   transition: linear 250ms;
 }
-.nft_cards:hover {
+.news_cards {
+  padding: 26px 17px 26px 20px;
+  border-radius: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+  transition: linear 250ms;
+  gap: 27px;
+}
+.max_w_1920 {
+  /* max-width: 1920px; */
+}
+.nft_cards:hover,
+.news_cards:hover {
   box-shadow: unset;
   border-color: transparent;
+}
+.news_para {
+  padding-bottom: 20px;
+}
+.next_arrow_position,
+.prev_arrow_position {
+  position: unset;
+  cursor: pointer;
+}
+.news_cards_space {
+  padding: 0 13px;
 }
 .px_2 {
   padding: 0 2px;
@@ -263,6 +286,16 @@ section:has(.hero_bg) {
   }
   .search_bar input {
     padding: 10px 0 8px 0;
+  }
+  .next_arrow_position {
+    left: -18px;
+    position: absolute;
+    transform: translateY(-50%);
+  }
+  .prev_arrow_position {
+    right: -18px;
+    position: absolute;
+    transform: translateY(-50%);
   }
   .hero_logo {
     background-color: var(--clr-gary);

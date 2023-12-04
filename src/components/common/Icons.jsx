@@ -60,3 +60,41 @@ export const Search = () => {
     </svg>
   );
 };
+export const NextArrow = () => {
+  return (
+    <svg
+      width="15"
+      height="25"
+      viewBox="0 0 15 25"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M2.52222 2.81836L12.5255 12.8216L2.52222 22.8249"
+        stroke="black"
+        stroke-width="4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};
+export const PrevArrow = () => {
+  return (
+    <svg
+      width="15"
+      height="25"
+      viewBox="0 0 15 25"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12.5222 2.81836L2.51894 12.8216L12.5222 22.8249"
+        stroke="black"
+        stroke-width="4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};

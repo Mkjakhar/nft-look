@@ -4,8 +4,8 @@ import { ExploreCardData } from "./common/Helper";
 const ExploreNft = () => {
   return (
     <>
-      <Container className="custom_container py-5">
-        <h2 className="common_heading pb-4 mb-0">Explore top NFT</h2>
+      <Container id="explore" className="custom_container py-md-4">
+        <h2 className="common_heading pb-4 mb-3">Explore top NFT</h2>
         {ExploreCardData.map((val, i) => (
           <div
             key={i}

@@ -13,7 +13,7 @@ const Header = () => {
     <React.Fragment>
       <Nav className="bg-white">
         <Container className="py-1 custom_container d-flex justify-content-between align-items-center">
-          <span>
+          <span style={{ cursor: "pointer" }}>
             <PageLogo />
           </span>
           <div className="d-flex align-items-center">
@@ -46,7 +46,7 @@ const Header = () => {
               </li>
               <li>
                 <a
-                  href="#Profile"
+                  href="#explore"
                   className="nav_list text-black opacity_06 ff_josefin fw-medium fs_sm"
                 >
                   Explore
@@ -54,7 +54,7 @@ const Header = () => {
               </li>
               <li>
                 <a
-                  href="#Profile"
+                  href="#news"
                   className="nav_list text-black opacity_06 ff_josefin fw-medium fs_sm"
                 >
                   News
@@ -95,7 +95,7 @@ const Header = () => {
               </li>
               <li onClick={() => setresNav(true)}>
                 <a
-                  href="#Profile"
+                  href="#explore"
                   className="nav_list text-black opacity_06 ff_josefin fw-medium fs_sm"
                 >
                   Explore
@@ -103,7 +103,7 @@ const Header = () => {
               </li>
               <li onClick={() => setresNav(true)}>
                 <a
-                  href="#Profile"
+                  href="#news"
                   className="nav_list text-black opacity_06 ff_josefin fw-medium fs_sm"
                 >
                   News

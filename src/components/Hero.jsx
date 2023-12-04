@@ -5,7 +5,7 @@ export const Hero = () => {
   return (
     <>
       <Header />
-      <section>
+      <section className="mb-md-4 pb-3">
         <div className="hero_bg d-flex flex-column align-items-center">
           <h1 className="fw-semibold fs_6xl ff_playfair text-white text-center mb-0">
             "Best New NFT to look out for"

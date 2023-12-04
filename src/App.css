@@ -3,6 +3,9 @@
   text-decoration: none !important;
   list-style-type: none !important;
 }
+body {
+  background-color: #fafafa !important;
+}
 :root {
   /* font-size */
   --fs-xxs: 12px;
@@ -208,6 +211,12 @@ section:has(.hero_bg) {
   border: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
   margin: 16px 0;
+  background-color: var(--clr-white);
+  transition: linear 250ms;
+}
+.nft_cards:hover {
+  box-shadow: unset;
+  border-color: transparent;
 }
 .px_2 {
   padding: 0 2px;
@@ -224,6 +233,29 @@ section:has(.hero_bg) {
   border-color: transparent;
   background-color: rgba(0, 0, 0, 0.46) !important;
 }
+.explore_cards {
+  margin-bottom: 13px;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: var(--clr-white);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+  transition: linear 250ms;
+}
+.explore_cards:hover {
+  box-shadow: unset;
+  border-color: transparent;
+}
+.object_style {
+  object-fit: cover;
+}
+.rounded_25 {
+  border-radius: 25px;
+}
+.explore_para {
+  padding-bottom: 16px;
+}
 @media (min-width: 576px) {
   .page_logo {
     width: 50px;
@@ -239,6 +271,13 @@ section:has(.hero_bg) {
   }
   .hero_bg p {
     margin-bottom: 37px;
+  }
+  .explore_cards {
+    gap: 32px;
+    padding: 20px 34px 21px 29px;
+  }
+  .explore_para {
+    padding-bottom: 33px;
   }
 }
 @media (min-width: 768px) {

@@ -11,7 +11,7 @@ const Header = () => {
   }
   return (
     <React.Fragment>
-      <Nav>
+      <Nav className="bg-white">
         <Container className="py-1 custom_container d-flex justify-content-between align-items-center">
           <span>
             <PageLogo />
@@ -23,7 +23,7 @@ const Header = () => {
                 <input
                   type="text"
                   placeholder="Search..."
-                  className="text_darkblack w-100 fw-normal border-0 ff_josefin"
+                  className="text_darkblack w-100 fw-normal border-0 ff_josefin bg-transparent"
                 />
               </div>
             </form>

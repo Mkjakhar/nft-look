@@ -24,7 +24,7 @@ const NftCards = () => {
         },
       },
       {
-        breakpoint: 992,
+        breakpoint: 991,
         settings: {
           slidesToShow: 3,
           centerMode: true,
@@ -32,7 +32,7 @@ const NftCards = () => {
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 767,
         settings: {
           slidesToShow: 2,
           centerMode: true,
@@ -56,12 +56,12 @@ const NftCards = () => {
           Top NFT to look out for in 2022
         </h2>
         <Slider {...settings}>
-          {NftCardData.map((val) => {
+          {NftCardData.map((val, i) => {
             return (
-              <div className="px_2">
+              <div key={i} className="px_2">
                 <div className="nft_cards d-flex flex-column align-items-center">
                   <img className="w-100" src={val.img} alt="nft1" />
-                  <p className="text-black w-100 ff_josefin fw-semibold lh_normal fd_2xl mt-2">
+                  <p className="text-black w-100 ff_josefin fw-semibold lh_normal fs_2xl mt-2">
                     {val.heading}
                   </p>
                   <div className="d-flex align-items-center justify-content-between w-100">
